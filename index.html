@@ -1,14 +1,21 @@
-<script>
-    // Seleciona o elemento select
-    const selectElement = document.querySelector('select');
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Valores</title>
+</head>
+<body>
+    <!-- Elemento select que receberá as opções -->
+    <select id="numeros"></select>
 
-    // Gera opções de 0 a 100 dinamicamente
-    if (selectElement) {
-        for (let i = 0; i <= 100; i++) {
-            const option = document.createElement('option');
-            option.value = i;
-            option.textContent = i;
-            selectElement.appendChild(option);
-        }
-    }
-</script>
+    <!-- Script para gerar as opções -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o elemento select
+            const selectElement = document.querySelector('#numeros');
+
+            // Gera opções de 0 a 100 dinamicamente
+            if (selectElement) {
+                for (let i = 
+
