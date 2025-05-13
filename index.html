@@ -7,15 +7,31 @@
 </head>
 <body>
     <!-- Elemento select que receberá as opções -->
+    <h1>Selecione um número:</h1>
     <select id="numeros"></select>
 
     <!-- Script para gerar as opções -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Seleciona o elemento select
-            const selectElement = document.querySelector('#numeros');
+            try {
+                // Seleciona o elemento select
+                const selectElement = document.querySelector('#numeros');
 
-            // Gera opções de 0 a 100 dinamicamente
-            if (selectElement) {
-                for (let i = 
-
+                // Gera opções de 0 a 100 dinamicamente
+                if (selectElement) {
+                    for (let i = 0; i <= 100; i++) {
+                        const option = document.createElement('option');
+                        option.value = i;
+                        option.textContent = i;
+                        selectElement.appendChild(option);
+                    }
+                } else {
+                    console.error("Elemento <select> não encontrado no DOM.");
+                }
+            } catch (error) {
+                console.error("Erro ao executar o script:", error);
+            }
+        });
+    </script>
+</body>
+</html>
